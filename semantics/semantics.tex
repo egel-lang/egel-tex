@@ -282,6 +282,24 @@ their byte code translation.
 
 \section{C++}
 
+The Egel interpreter uses a runtime a mapping of the above
+graph rewrite machinery to idiomatic C++ code. Input
+scripts are translated in a very trivial manner where,
+after lambda-lifting, all guarded abstractions are mapped
+to combinators, and each combinator is mapped to a C++
+object. Combinators, or C++ objects, can contain byte
+code comprising of simple graph manipulation instructions.
+The runtime then consists of nothing more than a
+collection of C++ objects which rewrite each other.
+
+One major benefit is that this appoach is `provably'
+memory safe since combinators/objects are natively
+reference counted objects, \code{malloc} and \code{new} are 
+completely avoided. However, the major drawback is
+performance, idiomatic C++ incurs a hefty cost in
+allocation and number of indirections. In short,
+this approach is robust but slow.
+
 \section{Conclusions}
 
 \bibliographystyle{abbrv}
