@@ -1,2 +1,6 @@
 # egel-tex
-Latex files documenting Egel
+LaTeX files documenting Egel.
+
+Directories and documents:
+
++ semantics/	The LaTeX sources of the semantics documentation.
