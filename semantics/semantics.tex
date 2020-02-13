@@ -243,7 +243,7 @@ Egel terms in the runtime always form a tree, or directed
 acyclic graph.
 \end{theorem}
 
-This is at heart an inductive argument which relies on a
+This is an inductive argument which relies on a
 property of the front-end Egel language. From now on,
 tree is written where we also mean directed acyclic graph.
 
@@ -282,7 +282,7 @@ their byte code translation.
 
 \section{C++}
 
-The Egel interpreter uses a runtime a mapping of the above
+The Egel interpreter has a runtime which is a mapping of the above
 graph rewrite machinery to idiomatic C++ code. Input
 scripts are translated in a very trivial manner where,
 after lambda-lifting, all guarded abstractions are mapped
@@ -290,17 +290,38 @@ to combinators, and each combinator is mapped to a C++
 object. Combinators, or C++ objects, can contain byte
 code comprising of simple graph manipulation instructions.
 The runtime then consists of nothing more than a
-collection of C++ objects which rewrite each other.
+collection of C++ objects which rewrite each other;
+each combinator pointed to by the root pointer is 
+simply called in a trampoline loop.
 
 One major benefit is that this appoach is `provably'
 memory safe since combinators/objects are natively
-reference counted objects, \code{malloc} and \code{new} are 
-completely avoided. However, the major drawback is
+reference counted objects allocated with
+Resource Acquisition Is Initialization (RAII),
+\code{malloc} and \code{new} are 
+completely avoided in the Egel interpreter source
+code. However, the major drawback is
 performance, idiomatic C++ incurs a hefty cost in
 allocation and number of indirections. In short,
 this approach is robust but slow.
 
+However, this simple semantics does allow for
+more experimentation. Concurrency is trivially
+implemented by inserting nodes into the graph
+which start rewriting in parallel to each other.
+Moreover, the scheme of backward pointing arrows
+to next redexes to rewrite also allowed for a
+trivial implementation of exceptions and 
+exception handling; i.e., each thunk is extended
+again with a pointer to the expression which
+holds the exception handler.
+
 \section{Conclusions}
+
+Egel is a toy languages which serves as a front-end
+to novel graph-rewrite machinery. This graph rewrite
+machinery is able to express computation as the 
+sole result of 
 
 \bibliographystyle{abbrv}
 \bibliography{egelbib}
