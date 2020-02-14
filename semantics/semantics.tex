@@ -308,12 +308,13 @@ However, this simple semantics does allow for
 more experimentation. Concurrency is trivially
 implemented by inserting nodes into the graph
 which start rewriting in parallel to each other.
-Moreover, the scheme of backward pointing arrows
-to next redexes to rewrite also allowed for a
+Moreover, the scheme of arrows
+to redexes to rewrite also allows for a
 trivial implementation of exceptions and 
-exception handling; i.e., each thunk is extended
+exception handling: each thunk is extended
 again with a pointer to the expression which
-holds the exception handler.
+holds an exception handler thunk to be applied
+when an exception occurs.
 
 \section{Conclusions}
 
