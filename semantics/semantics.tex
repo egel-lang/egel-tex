@@ -290,7 +290,7 @@ object. Combinators, or C++ objects, can contain byte
 code comprised of simple graph manipulation instructions.
 The runtime then consists of nothing more than a
 collection of C++ objects which rewrite each other;
-each combinator pointed to by the root pointer is 
+each thunk pointed to by the root pointer is 
 simply called in a trampoline loop.
 
 One major benefit is that this appoach is `provably'
