@@ -296,8 +296,8 @@ simply called in a trampoline loop.
 
 One major benefit is that this appoach is `provably'
 memory safe since combinators/objects are natively
-reference counted objects allocated with
-Resource Acquisition Is Initialization (RAII),
+reference counted objects allocated with the advised
+Resource Acquisition Is Initialization (RAII) scheme; i.e.,
 \code{malloc} and \code{new} are 
 completely avoided in the Egel interpreter source
 code. However, the major drawback is
