@@ -274,7 +274,7 @@ can result in either of two things: Either the fully
 reduced result (a tree) is placed in a receiving thunk and
 rewriting proceeds with the next redex, and that is trivially
 again a tree. Or, the chain of redexes is expanded with a new number 
-of redexes, conforming to the translations of the right-hand-side of
+of redexes, conforming to the translation of the right-hand-side of
 a guarded abstraction, and that must form a tree.
 
 The inductive step was checked by comparing some source code to
@@ -288,7 +288,7 @@ scripts are translated in a very trivial manner where,
 after lambda-lifting, all guarded abstractions are mapped
 to combinators, and each combinator is mapped to a C++
 object. Combinators, or C++ objects, can contain byte
-code comprising of simple graph manipulation instructions.
+code comprised of simple graph manipulation instructions.
 The runtime then consists of nothing more than a
 collection of C++ objects which rewrite each other;
 each combinator pointed to by the root pointer is 
