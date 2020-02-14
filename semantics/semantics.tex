@@ -67,11 +67,11 @@ concentrated on SK-combinator-driven evaluation culminating in
 the typed and lazily reduced Miranda\cite{turner:miranda}.
 Combinator-driven lazy graph rewriting spurred a number of 
 abstract machines such as the Spineless Tagless Graph Machine\cite{spj:stgm}
-behind Haskell and the Parallel ABC Machine\cite{plasmeijer:clean} for CLean.
+behind GHC/Haskell and the Parallel ABC Machine\cite{plasmeijer:clean} for Clean.
 
 But while graph rewriting is a pleasingly clean means to give an
 operational semantics to a term-rewriting language, ultimately it
-was deemed to slow and compilers for functional languages now
+was deemed too slow and compilers for functional languages now
 usually invest a great deal into compiling to more traditional
 schemes.
 However, because graph-rewriting is such a simple model with
