@@ -244,7 +244,7 @@ acyclic graph.
 
 The proof is an inductive argument which relies on a
 property of the front-end Egel language. From now on,
-tree is written where we also mean directed acyclic graph.
+tree is written where directed acyclic graph is meant.
 
 \begin{lemma}
 Fully reduced expressions always form a tree.
@@ -316,6 +316,13 @@ again with a pointer to the expression which
 holds an exception handler thunk to be applied
 when an exception occurs.
 
+Localized reasoning is seen as a major benefit
+of this model; i.e., there's no stack and there's
+no need for a complex garbage collection scheme
+including, for instance, a global mark and collect
+phase. The hope is that that will map better to 
+heavily concurrent architectures in the future.
+
 \section{Conclusions}
 
 Egel is a toy language which serves as a front-end
@@ -327,6 +334,10 @@ the graph is always directed and acyclic.
 Egel is implemented in C++ where combinators
 are directly mapped to objects in a memory-safe
 manner.
+
+Localized reasoning, no stack, no global mark and
+collect, is hoped to map better to future massively
+concurrent microprocessor architectures.
 
 Because this operational model is that simple, it
 allows for a lot of experimentation, which will
