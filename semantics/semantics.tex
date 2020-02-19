@@ -34,13 +34,13 @@ robust memory-safe construction in C++.
 %
 Though graph rewriters are normally implemented by elaborate
 machines, this can mostly be avoided by changing the representation of 
-term graphs. With an informal inductive argument the resulting 
+term graphs. With an informal inductive argument, the resulting 
 representation is shown to always form directed acyclic graphs.
 Moreover, this graph semantics can trivially be extended to allow
 exception handling and cheap concurrency.
 %
 Egel, the interpreter, exploits this semantics with a straight-forward
-mapping from combinators to reference counted C++ objects.
+mapping from combinators to reference-counted C++ objects.
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -295,7 +295,7 @@ simply called in a trampoline loop.
 
 One major benefit is that this appoach is `provably'
 memory safe since combinators/objects are natively
-reference counted objects allocated with the advised
+reference-counted objects allocated with the advised
 Resource Acquisition Is Initialization (RAII) scheme; i.e.,
 \code{malloc} and \code{new} are 
 completely avoided in the Egel interpreter source
