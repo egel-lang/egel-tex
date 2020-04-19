@@ -33,8 +33,8 @@ is to showcase an abstract graph-rewriting semantics allowing a
 robust memory-safe construction in C++.
 %
 Though graph rewriters are normally implemented by elaborate
-machines, this can mostly be avoided by changing the representation of 
-term graphs. With an informal inductive argument, the resulting 
+machines, this can mostly be avoided with a change in the representation of 
+term graphs. With an informal inductive argument, that 
 representation is shown to always form directed acyclic graphs.
 Moreover, this graph semantics can trivially be extended to allow
 exception handling and cheap concurrency.
@@ -137,8 +137,8 @@ The \code{*} root node points to what will be rewritten first.
 
 The cost of allocating extra pointers in a thunk may seem wasteful
 but shouldn't be more burdensome than allocating a thunk and some
-stack space. Though the benefits of this approach are completely
-undone by Egel's idiomatic C++ implementation.
+stack space. Though the performance benefits of this approach are 
+completely undone by Egel's wasteful idiomatic C++ implementation.
 
 The chain of redexes to rewrite makes explicit that the reduction
 order is strict or eager. Arguments to functions are rewritten first,
@@ -169,7 +169,7 @@ and might, for instance, print the result.
 \end{center}
 \end{figure}
 
-The clue of this paper: Where the first picture originally started of
+The clue of this paper: Where the first picture originally starts of
 with a tree, or with sharing a directed acyclic graph (DAG), each
 other figure still is a tree, or DAG; changing representation or 
 rewriting kept this invariant.
@@ -288,7 +288,7 @@ after lambda-lifting, all guarded abstractions are mapped
 to combinators, and each combinator is mapped to a C++
 object. Combinators, or C++ objects, can contain byte
 code comprised of simple graph manipulation instructions.
-The runtime then consists of nothing more than a
+The runtime consists of nothing more than a
 collection of C++ objects which rewrite each other;
 each thunk pointed to by the root pointer is 
 simply called in a trampoline loop.
@@ -299,12 +299,12 @@ reference-counted objects allocated with the advised
 Resource Acquisition Is Initialization (RAII) scheme; i.e.,
 \code{malloc} and \code{new} are 
 completely avoided in the Egel interpreter source
-code. However, the major drawback is
+code. A major drawback is
 performance, idiomatic C++ incurs a hefty cost in
 allocation and number of indirections. In short,
 this approach is robust but slow.
 
-However, this simple semantics does allow for
+This simple semantics does allow for
 more experimentation. Concurrency is trivially
 implemented by inserting nodes into the graph
 which start rewriting in parallel to each other.
@@ -329,8 +329,8 @@ than other approaches.
 Egel is a toy language which serves as a front-end
 to novel graph-rewrite machinery. This graph-rewrite
 machinery is able to express computation as the 
-sole result of cooperating nodes in a graph; moreover,
-the graph is always directed and acyclic.
+sole result of cooperating nodes in a directed 
+acyclic graph.
 
 Egel is implemented in C++ where combinators
 are directly mapped to objects in a memory-safe
