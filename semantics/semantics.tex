@@ -206,7 +206,7 @@ scripts, it has namespaces, and definitions of functions may
 be recursive.
 
 What is slightly different is that functions are defined
-with guarded lambda abstractions which are directly mapped
+with pattern-matching lambda abstractions which are directly mapped
 to (unnamed) combinators by the interpreter.
 
 The example script below shows how lists are defined and used.
@@ -255,7 +255,7 @@ language since combinators could, in principle, rewrite
 terms in the runtime to anything. However, it is assumed
 that combinators are the result of the translation of 
 code in the front end, i.e., complex expressions of 
-guarded anonymous abstractions. Since abstractions can
+pattern-matching anonymous abstractions. Since abstractions can
 only take apart and reassemble complex trees, with
 some confidence this property holds. 
 
@@ -274,7 +274,7 @@ reduced result (a tree) is placed in a receiving thunk and
 rewriting proceeds with the next redex, and that is trivially
 again a tree. Or, the chain of redexes is expanded with a new number 
 of redexes, conforming to the translation of the right-hand-side of
-a guarded abstraction, and that must form a tree.
+a pattern-matching abstraction, and that must form a tree.
 
 The inductive step was checked by comparing some source code to
 their byte code translation.
@@ -284,7 +284,7 @@ their byte code translation.
 The Egel interpreter has a runtime which is a mapping of the above
 graph rewrite machinery to idiomatic C++ code. Input
 scripts are translated in a very trivial manner where,
-after lambda-lifting, all guarded abstractions are mapped
+after lambda-lifting, all pattern-matching abstractions are mapped
 to combinators, and each combinator is mapped to a C++
 object. Combinators, or C++ objects, can contain byte
 code comprised of simple graph manipulation instructions.
