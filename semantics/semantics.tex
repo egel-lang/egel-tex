@@ -289,7 +289,8 @@ to combinators, and each combinator is mapped to a C++
 object. Combinators, or C++ objects, can contain byte
 code comprised of simple graph manipulation instructions.
 The runtime consists of nothing more than a
-collection of C++ objects which rewrite each other;
+collection of C++ objects which rewrite each other,
+with a pool of combinator definitions for convenience;
 each thunk pointed to by the root pointer is 
 simply called in a trampoline loop.
 
