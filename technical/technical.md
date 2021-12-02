@@ -20,7 +20,7 @@ M.C.A. (Marco) Devillers
 
 # The operational model
 
-* everything is a directed acyclic grap (DAG), or tree for short
+* everything is a directed acyclic graph (DAG), or tree for short
 * _no_ abstract machine, nothing, nada
 * KISS (keep it simple since -you- are stupid) technology
 
@@ -42,7 +42,7 @@ M.C.A. (Marco) Devillers
 
 ![h:350](figures/termC.svg)
 
-* It's still a DAG, or tree!
+* It's still a directed acyclic graph (DAG)!
 ---
 
 # Evaluation (1)
@@ -68,7 +68,7 @@ Fully exploit this computational model
 
 ---
 
-# Front-end Language
+# Front-end language
 
 ```
     # A parallel fibonnaci implementation.
@@ -98,7 +98,7 @@ Fully exploit this computational model
 
 ---
 
-# Front-end Language
+# Front-end language
 
 * reminiscent of a lambda calculus with constants
 * scripts are collections of terms
@@ -122,7 +122,7 @@ Support batch, interactive, and read-eval-print (REPL) modes.
 
 ---
 
-# Beta v1.0 version
+# 0.1 (beta) version
 
 * stand-alone interpreter for Linux/BSD/MacOS systems
 * capable of automating simple tasks
@@ -133,9 +133,8 @@ Support batch, interactive, and read-eval-print (REPL) modes.
 * now working on serialization, transport, and node protocol
 
 ---
-# Aimed at Taking over The World
+# Aimed at taking over the world
 
 * see a data center as just a large computer
 * start any calculation anywhere
 * [https://egel-lang.github.io/](https://egel-lang.github.io/)
-
