@@ -26,6 +26,13 @@ M.C.A. (Marco) Devillers
 
 ---
 
+# A simple expression
+```
+    (1 + 2) * (inc 1)
+```
+
+---
+
 # From expression to tree
 
 ![h:350](figures/termA.svg)
