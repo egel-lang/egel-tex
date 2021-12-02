@@ -125,6 +125,7 @@ Support batch, interactive, and read-eval-print (REPL) modes.
 # 0.1 (beta) version
 
 * stand-alone interpreter for Linux/BSD/MacOS systems
+* translates terms to C++ objects running bytecode
 * capable of automating simple tasks
 * tardy but robust
 * relatively light-weight (1 MiB) but needs Unicode (libicu)
