@@ -20,7 +20,7 @@ M.C.A. (Marco) Devillers
 
 # The operational model
 
-* everything is a directed acyclic graph (DAG), or tree for short
+* any term forms a directed acyclic graph (DAG), or tree for short
 * _no_ abstract machine, nothing, nada
 * KISS (keep it simple since -you- are stupid) technology
 
@@ -81,7 +81,7 @@ Fully exploit this computational model
         def fib =
             [ 0 -> 0
             | 1 -> 1
-            | N -> fib (N- 2) + fib (N- 1) ]
+            | N -> fib (N - 2) + fib (N - 1) ]
 
         def pfib =
             [ 0 -> 0
@@ -134,7 +134,7 @@ Support batch, interactive, and read-eval-print (REPL) modes.
 * now working on serialization, transport, and node protocol
 
 ---
-# Aimed at taking over the world
+# Aimed at taking over the world!
 
 * see a data center as just a large computer
 * start any calculation anywhere
