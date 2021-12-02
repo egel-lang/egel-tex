@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2.8b -->
+<!-- CreationDate: 2021-12-02 04:02:27 -->
+<!-- Magnification: 1.05 -->
+<svg	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="32pt" height="68pt"
+	viewBox="428 203 504 1072">
+<g fill="none">
+<!-- Line -->
+<rect x="675" y="225" width="225" height="225"
+	stroke="#000000" stroke-width="15px"/>
+<!-- Line -->
+<rect x="450" y="225" width="225" height="225"
+	stroke="#000000" stroke-width="15px"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp0">
+	<path clip-rule="evenodd" d="M 428,203 H 932 V 1275 H 428 z
+		M 488,634 547,624 501,487 487,489z"/>
+</clipPath>
+</defs>
+<polyline points=" 585,1035 495,495" clip-path="url(#cp0)"
+	stroke="#000000" stroke-width="8px" stroke-dasharray="30 30"/>
+<!-- Forward arrow to point 495,495 -->
+<polygon points=" 547,624 498,511 488,634 547,624"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8" fill="#000000"/>
+<!-- Line -->
+<defs>
+<clipPath id="cp1">
+	<path clip-rule="evenodd" d="M 428,203 H 932 V 1275 H 428 z
+		M 849,719 789,724 825,864 838,863z"/>
+</clipPath>
+</defs>
+<polyline points=" 786,362 831,857" clip-path="url(#cp1)"
+	stroke="#000000" stroke-width="8px"/>
+<!-- Forward arrow to point 831,857 -->
+<polygon points=" 789,724 830,841 849,719 789,724"
+	stroke="#000000" stroke-width="8px" stroke-miterlimit="8" fill="#000000"/>
+<!-- Text -->
+<text xml:space="preserve" x="810" y="1080" fill="#000000" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">6</text>
+<!-- Text -->
+<text xml:space="preserve" x="585" y="1260" fill="#000000" font-family="Helvetica" font-style="normal" font-weight="normal" font-size="144" text-anchor="start">*</text>
+</g>
+</svg>
